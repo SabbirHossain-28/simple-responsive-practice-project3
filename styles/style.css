@@ -1,0 +1,57 @@
+header,nav,main,.sidebar,.advertise,footer{
+    background-color: brown;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid rgb(229, 152, 9);
+}
+header{
+    grid-area: header;
+}
+nav{
+    grid-area: nav;
+}
+main{
+    grid-area: main;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.advertise{
+    grid-area: advertise;
+}
+footer{
+    grid-area: footer;
+}
+.container{
+    display: grid;
+    grid-template-areas:
+    "header header header header"
+    "nav main main sidebar"
+    "nav main main advertise"
+    "footer footer footer footer"
+    ;
+}
+@media screen and (max-width:576px) {
+    .container{
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "sidebar"
+        "advertise"
+        "footer"
+        ;
+    }
+}
+@media screen and (min-width:577px) and (max-width:992px) {
+    .container{
+        grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "sidebar main main main"
+        "sidebar main main main"
+        "advertise footer footer footer"
+        ;
+    }
+}
